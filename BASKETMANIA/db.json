@@ -18,11 +18,11 @@
         "height": "6'10\"",
         "weight": "240 lbs",
         "birthdate": "1988-09-29",
-        "image_url": "hhttps://i.pinimg.com/236x/23/18/93/2318930549a4f8240f01722d860e178b.jpg"
+        "image_url": "https://i.pinimg.com/236x/23/18/93/2318930549a4f8240f01722d860e178b.jpg"
       },
       {
         "player_id": "3",
-        "name": "Giannis Antetokounmpo",
+        "name": "Antetokounmpo",
         "team": "Milwaukee Bucks",
         "position": "Forward",
         "height": "6'11\"",
@@ -62,46 +62,6 @@
       },
       {
         "player_id": "7",
-        "name": "Jayson Tatum",
-        "team": "cleveland cavaliers",
-        "position": "Forward",
-        "height": "6'8\"",
-        "weight": "210 lbs",
-        "birthdate": "1998-03-03",
-        "image_url": "https://i.pinimg.com/236x/1f/54/5b/1f545b643109ab9c005878c9de77216a.jpg"
-      },
-      {
-        "player_id": "8",
-        "name": "Anthony Davis",
-        "team": "Los Angeles Lakers",
-        "position": "Forward/Center",
-        "height": "6'10\"",
-        "weight": "253 lbs",
-        "birthdate": "1993-03-11",
-        "image_url": "https://i.pinimg.com/236x/98/ca/54/98ca541e44c5180df0209402bb45f3dd.jpg"
-      },
-      {
-        "player_id": "9",
-        "name": "Kawhi Leonard",
-        "team": "Los Angeles Clippers",
-        "position": "Forward",
-        "height": "6'7\"",
-        "weight": "225 lbs",
-        "birthdate": "1991-06-29",
-        "image_url": "https://i.pinimg.com/236x/57/01/92/57019294472eaaabb5e43f889ed72a68.jpg"
-      },
-      {
-        "player_id": "10",
-        "name": "Ja Morant",
-        "team": "dallas mavericks",
-        "position": "Guard",
-        "height": "6'3\"",
-        "weight": "174 lbs",
-        "birthdate": "1999-08-10",
-        "image_url": "https://i.pinimg.com/236x/67/b8/e3/67b8e3d0e14b3666980cf6c2dfb48642.jpg"
-      },
-      {
-        "player_id": "11",
         "name": "Zion Williamson",
         "team": "New Orleans Pelicans",
         "position": "Forward",
@@ -109,6 +69,48 @@
         "weight": "284 lbs",
         "birthdate": "2000-07-06",
         "image_url": "https://i.pinimg.com/236x/cf/d1/47/cfd1476b8f49d4ecf3c742d77b668b80.jpg"
+      },
+      {
+        "player_id": "8",
+        "name": "Myles Turner",
+        "team": "golden state",
+        "position": "Center",
+        "height": "6'10\"",
+        "weight": "250 lbs",
+        "birthdate": "1996-03-24",
+        "image_url": "https://www.basketballnetwork.net/.image/c_fit%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1290/MTkyNzQ0MDkxMTkxMDkyMjUz/myles-turner.jpg"
+      },
+    
+      {
+        "player_id": "9",
+        "name": "Pascal Siakam",
+        "team": "phoenix sounds",
+        "position": "Forward",
+        "height": "6'9\"",
+        "weight": "230 lbs",
+        "birthdate": "1994-04-02",
+        "image_url": "https://basketnews.com/image-415326-crop700x700.jpg"
+      },
+      {
+        "player_id": "10",
+        "name": "Darius Garland",
+        "team": "boston celtics",
+        "position": "Guard",
+        "height": "6'1\"",
+        "weight": "192 lbs",
+        "birthdate": "2000-01-26",
+        "image_url": "https://i.pinimg.com/236x/5b/b7/41/5bb7418244b5323c350dc12768e0bb66.jpg"
+      },
+    
+      {
+        "player_id": "11",
+        "name": "Jayson Tatum",
+        "team": "cleveland cavaliers",
+        "position": "Forward",
+        "height": "6'8\"",
+        "weight": "210 lbs",
+        "birthdate": "1998-03-03",
+        "image_url": "https://i.pinimg.com/236x/1f/54/5b/1f545b643109ab9c005878c9de77216a.jpg"
       },
       {
         "player_id": "12",
@@ -252,13 +254,13 @@
       },
       {
         "player_id": "26",
-        "name": "Pascal Siakam",
-        "team": "phoenix sounds",
+        "name": "Kawhi Leonard",
+        "team": "Los Angeles Clippers",
         "position": "Forward",
-        "height": "6'9\"",
-        "weight": "230 lbs",
-        "birthdate": "1994-04-02",
-        "image_url": "https://basketnews.com/image-415326-crop700x700.jpg"
+        "height": "6'7\"",
+        "weight": "225 lbs",
+        "birthdate": "1991-06-29",
+        "image_url": "https://i.pinimg.com/236x/57/01/92/57019294472eaaabb5e43f889ed72a68.jpg"
       },
       {
         "player_id": "27",
@@ -282,13 +284,13 @@
       },
       {
         "player_id": "29",
-        "name": "Myles Turner",
-        "team": "golden state",
-        "position": "Center",
+        "name": "Anthony Davis",
+        "team": "Los Angeles Lakers",
+        "position": "Forward/Center",
         "height": "6'10\"",
-        "weight": "250 lbs",
-        "birthdate": "1996-03-24",
-        "image_url": "https://www.basketballnetwork.net/.image/c_fit%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1290/MTkyNzQ0MDkxMTkxMDkyMjUz/myles-turner.jpg"
+        "weight": "253 lbs",
+        "birthdate": "1993-03-11",
+        "image_url": "https://i.pinimg.com/236x/98/ca/54/98ca541e44c5180df0209402bb45f3dd.jpg"
       },
       {
         "player_id": "30",
@@ -473,13 +475,13 @@
       },
       {
         "player_id": "48",
-        "name": "Darius Garland",
-        "team": "boston celtics",
+        "name": "Ja Morant",
+        "team": "dallas mavericks",
         "position": "Guard",
-        "height": "6'1\"",
-        "weight": "192 lbs",
-        "birthdate": "2000-01-26",
-        "image_url": "https://i.pinimg.com/236x/5b/b7/41/5bb7418244b5323c350dc12768e0bb66.jpg"
+        "height": "6'3\"",
+        "weight": "174 lbs",
+        "birthdate": "1999-08-10",
+        "image_url": "https://i.pinimg.com/236x/67/b8/e3/67b8e3d0e14b3666980cf6c2dfb48642.jpg"
       },
       {
         "player_id": "49",
