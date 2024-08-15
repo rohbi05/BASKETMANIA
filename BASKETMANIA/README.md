@@ -73,7 +73,7 @@ cd BASKETMANIA
 ```
 3 Install dependencies:
 ```bash
-npm install
+npm run dev
 ```
 4 Start the server:
 ```bash
