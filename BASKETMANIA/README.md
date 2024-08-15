@@ -57,3 +57,29 @@ This backend serves as an API for managing players and user teams in a sports ap
 - ### DELETE /my_team/:playerId
 - Removes a player from the user's team.
 - Response: 204 No Content
+
+## Setup
+### Prerequisites
+- Node.js
+- npm 
+### Installation
+1 Clone the repository:
+```bash
+git clone git@github.com:rohbi05/BASKETMANIA.git
+```
+2 Navigate to the project directory:
+```bash
+cd BASKETMANIA
+```
+3 Install dependencies:
+```bash
+npm install
+```
+4 Start the server:
+```bash
+npm start
+```
+The server will run on **http://localhost:3000** for players and **http://localhost:3001** for the user's team.
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
