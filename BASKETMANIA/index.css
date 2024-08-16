@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .img {
   display: inline-block;
   height: 400%;
@@ -44,7 +45,8 @@ body.active-modal {
   font-size: 18px;
 }
 
-.modal, .overlay {
+.modal,
+.overlay {
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -55,7 +57,7 @@ body.active-modal {
 }
 
 .overlay {
-  background: rgba(49,49,49,0.8);
+  background: rgba(49, 49, 49, 0.8);
 }
 .modal-content {
   position: absolute;
@@ -79,8 +81,6 @@ body.active-modal {
 body.active {
   overflow-y: hidden;
 }
-
-
 
 .btn-open {
   display: flex;
@@ -131,34 +131,6 @@ body.active {
     margin-left: 10px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-lk
 .modal, .overlay {
   width: 100vw;
   height: 100vh;
@@ -170,7 +142,7 @@ lk
 }
 
 .overlay {
-  background: rgba(49,49,49,0.8);
+  background: rgba(49, 49, 49, 0.8);
 }
 .modal-content {
   position: absolute;
@@ -192,10 +164,7 @@ lk
   padding: 5px 7px;
 }
 
-
-
-
-/* From Uiverse.io by satyamchaudharydev */ 
+/* From Uiverse.io by satyamchaudharydev */
 .close-btn {
   width: 140px;
   height: 56px;
@@ -285,3 +254,5 @@ button svg {
 button:hover svg {
   transform: translateY(-50%) rotate(-90deg);
 }
+=======
+>>>>>>> 4c695cf887474352f2ecd61d01ccb283a4d01c9e
