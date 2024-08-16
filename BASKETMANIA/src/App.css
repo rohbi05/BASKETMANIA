@@ -177,12 +177,9 @@
 
 .span a {
   color: var(--clr);
-<<<<<<< HEAD
-}>>>>>>> developments
 
-=======
-=======
 }
+
 
 
 .App {
@@ -459,7 +456,7 @@
     height: 24px;
   }
   
->>>>>>> e7935603493db1d3bad3554112343feaae4b844a
+
 .img {
   display: inline-block;
   height: 400%;
@@ -716,4 +713,45 @@ button svg {
 
 button:hover svg {
   transform: translateY(-50%) rotate(-90deg);
+}
+
+
+.fixtures {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px; /* Adjust margin to control spacing around the container */
+  position: absolute; /* Position it absolutely */
+  left: 0; /* Align it to the left edge */
+  top: 20px; /* Adjust top position if needed */
+}
+
+.fixtures h2 {
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.fixtures p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.fixtures-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fixture-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #444;
 }
