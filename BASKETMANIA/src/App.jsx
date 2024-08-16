@@ -1,19 +1,34 @@
 import App1 from './components/App1'
 import TeamLogoSlider from './components/TeamLogoSlider'
-import App2 from './components/ App2';
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/NavBar.jsx'
+import Home from './components/Home.jsx';
+import About from './components/About.jsx'
+import SignInModal from './components/SignInModal';
+import Fixtures from './components/Fixtures.jsx'
+import Footer from './components/Footer.jsx'
+
 function App() {
   return (
     <>
-     <App2/>
-    <TeamLogoSlider/>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/Home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signin" element={<SignInModal />} />
+        </Routes>
+    </Router>
+    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '20px' }}>
+        <TeamLogoSlider />
+        <Fixtures />
+          </div>
+          {/* <Fixtures />
+          <TeamLogoSlider /> */}
+          
     <App1/>
-<Footer/>
-
+    <Footer/>
 </>
   );}
-
-
-    
 
 export default App;

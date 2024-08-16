@@ -1,22 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './NavBar';
-import Home from '../Components/Home';
-import About from '../Components/About';
-import SignInModal from './SignInModal';
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import NavBar from './NavBar';
+// import About from './About'
 
-const App2 = () => {
-  return (
-    <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/signin" element={<SignInModal />} />
+// import SignInModal from './SignInModal';
+
+// const App2 = () => {
+//   return (
+//     <Router>
+//       <NavBar />
+//       <Routes>
+//         <Route path="/home" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/signin" element={<SignInModal />} />
         
-      </Routes>
-    </Router>
-  );
-};
+//       </Routes>
+//     </Router>
+//   );
+// };
 
-export default App2;
+// export default App2;
