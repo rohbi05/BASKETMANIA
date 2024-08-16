@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-export default function Modal() {
+const About = () => {
   const [modal, setModal] = useState(false);
 
   const handleClick = () => {
@@ -14,15 +14,15 @@ export default function Modal() {
   }
 
   return (
-    <>
+    <div>
       <button onClick={handleClick} className="btn-open">
-        <span class="text">Learn-more!</span>
-        <span class="icon-Container">
+        <span className="text">Learn-more!</span>
+        <span className="icon-Container">
           <svg
             width="16"
             height="19"
             viewBox="0 0 16 19"
-            fill="nones"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
@@ -43,7 +43,7 @@ export default function Modal() {
         <div className="modal">
           <div onClick={handleClick} className="overlay"></div>
           <div className="modal-content">
-            <h2> ABOUT BASKET-MANIA</h2>
+            <h2>ABOUT BASKET-MANIA</h2>
             <p>
               Basketball Mania lets users explore detailed player stats and
               create their ideal team using an intuitive drag-and-drop builder.
@@ -61,18 +61,18 @@ export default function Modal() {
                 <span>Home</span>
               </div>
               <svg
-                stroke-width="2"
+                strokeWidth="2"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 fill="none"
-                class="h-6 w-6"
+                className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20px"
               >
                 <path
                   d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  stroke-linejoin="round"
-                  stroke-linecap="round"
+                  strokeLinejoin="round"
+                  strokeLinecap="round"
                 ></path>
               </svg>
             </button>
@@ -84,6 +84,8 @@ export default function Modal() {
         enthusiasts, allowing users to delve into player statistics and create
         their ultimate dream basketball team. Here’s a detailed description:
       </p>
-    </>
+    </div>
   );
-}
+};
+
+export default About;
