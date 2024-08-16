@@ -10,10 +10,10 @@ const App1 = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [myTeam, setMyTeam] = useState([]);
-  const [view, setView] = useState('players'); 
+  const [view, setView] = useState('players'); // 'players' or 'myTeam'
 
   useEffect(() => {
-    fetch('http://localhost:3000/players')
+    fetch('https://basketmania-backend.vercel.app/players')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -32,7 +32,7 @@ const App1 = () => {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:3001/my_team')
+    fetch('https://team-backend-delta.vercel.app/my_team')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -53,7 +53,20 @@ const App1 = () => {
   };
 
   const handleAddPlayer = (player) => {
-    fetch('http://localhost:3001/my_team', {
+    // Check if the player is already in the team
+    const isPlayerInTeam = myTeam.some(p => p.player_id === player.player_id);
+  
+    if (isPlayerInTeam) {
+      alert("You can't add the same player twice to your team!");
+      return;
+    }
+  
+    console.log('Adding player:', player); // Debugging line
+  
+    // Optimistically add the player to the UI
+    setMyTeam(prevTeam => [...prevTeam, player]);
+  
+    fetch('https://team-backend-delta.vercel.app/my_team', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -67,28 +80,32 @@ const App1 = () => {
         return response.json();
       })
       .then(data => {
-        setMyTeam(prevTeam => [...prevTeam, data]);
+        console.log('Player added:', data); // Debugging line
+  
+        // No need to update the state again since we optimistically added the player
       })
-      .catch(error => {
-        setError(error.message);
-      });
+      
   };
-
-  const handleRemovePlayer = (playerId) => {
+   const handleRemovePlayer = (playerId) => {
     // Optimistically remove the player from the UI
     setMyTeam(prevTeam => prevTeam.filter(player => player.player_id !== playerId));
-
-    // Remove the player from the server
-    fetch(`http://localhost:3001/my_team/${playerId}`, {
+  
+    fetch(`https://team-backend-delta.vercel.app/my_team/${playerId}`, {
       method: 'DELETE',
     })
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
+        return response.json(); // Assuming your backend returns some JSON response
+      })
+      .then(data => {
+        console.log('Player successfully deleted:', data); // Debugging line
+        // Optionally update the state here if needed, but optimistic UI already removed the player
       })
      
   };
+  
 
   const handleViewChange = (view) => {
     setView(view);
@@ -104,13 +121,12 @@ const App1 = () => {
           <h1>Best Players</h1>
           {selectedTeamPlayers.length > 0 ? (
             <>
-              
               <Players
                 players={selectedTeamPlayers}
                 onPlayerClick={() => {}}
                 onAddPlayer={handleAddPlayer}
               />
-              <button onClick={() => setSelectedTeamPlayers([])}>Back to Best Players</button>
+              <button className='button' onClick={() => setSelectedTeamPlayers([])}>Back to Best Players</button>
             </>
           ) : (
             <Players
@@ -119,7 +135,7 @@ const App1 = () => {
               onAddPlayer={handleAddPlayer}
             />
           )}
-          <button onClick={() => handleViewChange('myTeam')}>View My Team</button>
+          <button className='button' onClick={() => handleViewChange('myTeam')}>View My Team</button>
         </>
       )}
       {view === 'myTeam' && (
