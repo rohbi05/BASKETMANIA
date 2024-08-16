@@ -47,6 +47,7 @@ The application will run on  `http://localhost:5173/`.
 
 Browse through the available players in the Players section.
 Click on any player’s image to view members of that team or add them to your team.
+
 3. **Sign In Modal:**
 
 - Click on the "Sign In" button in the navbar to open the Sign In modal.
