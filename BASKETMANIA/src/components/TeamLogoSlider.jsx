@@ -12,7 +12,7 @@ const images = [
 ];
 const TeamLogoSlider = () => {
   const [index, setIndex] = useState(0);
-  const delay = 2500;
+  const delay = 5000;
 
   useEffect(() => {
     setTimeout(
