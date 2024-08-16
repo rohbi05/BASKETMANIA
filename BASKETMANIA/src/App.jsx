@@ -3,9 +3,13 @@ import TeamLogoSlider from './components/TeamLogoSlider'
 function App() {
   return (
     <>
+
     <TeamLogoSlider/>
     <App1/>
 </>
   );}
+
+
+    
 
 export default App;

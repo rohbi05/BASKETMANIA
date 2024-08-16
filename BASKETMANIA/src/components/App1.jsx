@@ -104,7 +104,7 @@ const App1 = () => {
           <h1>Best Players</h1>
           {selectedTeamPlayers.length > 0 ? (
             <>
-              <TeamLogoSlider />
+              
               <Players
                 players={selectedTeamPlayers}
                 onPlayerClick={() => {}}
