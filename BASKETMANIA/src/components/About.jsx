@@ -29,4 +29,7 @@ const About = ({ isOpen, onClose }) => {
 };
 
 export default About;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 50babf9f25df578f6fc635b70b616bc689a570d1
