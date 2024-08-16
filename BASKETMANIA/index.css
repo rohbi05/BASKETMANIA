@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .img {
   display: inline-block;
   height: 400%;
@@ -253,3 +254,5 @@ button svg {
 button:hover svg {
   transform: translateY(-50%) rotate(-90deg);
 }
+=======
+>>>>>>> 4c695cf887474352f2ecd61d01ccb283a4d01c9e
