@@ -71,14 +71,15 @@ BasketMania/
 │   └── index.html
 ├── src/
 │   ├── components/
-│   │   ├── TeamLogoSlider.js
-│   │   ├── Players.js
-│   │   ├── SignInModal.js
-│   │   ├── Footer.js
-│   │   └── Fixtures.js
+│   │   ├── App2.jsx
+│   │   ├── About.jsx
+│   │   ├── App1.jsx
+│   │   ├── Fixtures.jsx
+│   │   └── Footer.jsx
+|   |   |__ ...
 │   ├── App.css
-│   ├── App.js
-│   ├── index.js
+│   ├── App.jsx
+│   ├── main.jsx
 │   └── ...
 ├── package.json
 └── README.md
