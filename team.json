@@ -1,0 +1,16 @@
+{
+    "my_team": [
+      {
+        "id": "3976",
+        "player_id": "3",
+        "name": "Antetokounmpo",
+        "team": "Milwaukee Bucks",
+        "position": "Forward",
+        "height": "6'11\"",
+        "weight": "242 lbs",
+        "birthdate": "1994-12-06",
+        "image_url": "https://i.pinimg.com/564x/a0/d6/f0/a0d6f04ddb9f5a193eefb408a4aa253f.jpg"
+      }
+    ]
+  }
+  

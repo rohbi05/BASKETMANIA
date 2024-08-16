@@ -4,6 +4,8 @@ import NavBar from './NavBar';
 import Home from './Home';
 import About from './About';
 import SignInModal from './SignInModal';
+import '../App.css'
+
 
 const App2 = () => {
   return (
