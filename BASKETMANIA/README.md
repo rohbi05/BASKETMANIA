@@ -91,7 +91,7 @@ json-server --watch team.json --port 3001
 npm run dev
 ```
 
-The server will run on **http://localhost:3000** for players and **http://localhost:3001** for the user's team.
+oo2 The server will run on **http://localhost:3000** for players and **http://localhost:3001** for the user's team.
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
