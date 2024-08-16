@@ -1,7 +1,5 @@
-// src/components/Footer.js
-
 import React from "react";
-import "./Footer.css"; // Import your CSS file
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -72,9 +70,6 @@ const Footer = () => {
             </li>
             <li>
               <a href="/terms-of-service">Terms of Service</a>
-            </li>
-            <li>
-              <a href="/cookie-policy">Cookie Policy</a>
             </li>
           </ul>
         </div>
