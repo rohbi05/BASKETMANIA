@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SignInModal from './SignInModal'; 
 import '../App.css'
+import About from './About'
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,6 +35,7 @@ const Navbar = () => {
         </ul>
       </div>
       <SignInModal isOpen={isModalOpen} onClose={closeModal} />
+      <About/>
     </nav>
   );
 };
