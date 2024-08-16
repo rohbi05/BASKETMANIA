@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import SignInModal from './SignInModal'; 
-import '../App.css'
-import About from './About'
+import SignInModal from './SignInModal';
+import About from './About';
+import '../App.css';
 
 const Navbar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);  
   const navigate = useNavigate();
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openSignInModal = () => setIsSignInModalOpen(true);
+  const closeSignInModal = () => setIsSignInModalOpen(false);
+
+  const openAbout = () => setIsAboutModalOpen(true);  
+  const closeAbout = () => setIsAboutModalOpen(false); 
 
   const handleHomeClick = (event) => {
-    event.preventDefault();  // Prevent the default behavior
+    event.preventDefault();
     navigate('/home');
-    window.location.reload();  // Refresh the page
+    window.location.reload();
   };
 
   return (
@@ -30,14 +34,14 @@ const Navbar = () => {
       <div className="navbar-right">
         <ul className="navbar-links">
           <li><Link to="/home" onClick={handleHomeClick}>Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><button onClick={openModal} style={{ cursor: 'pointer' }}>Sign In</button></li>
+          <li><span onClick={openAbout} style={{ cursor: 'pointer' }}>About</span></li>  {/* Use button to trigger About modal */}
+          <li><button onClick={openSignInModal} style={{ cursor: 'pointer' }}>Sign In</button></li>
         </ul>
       </div>
-      <SignInModal isOpen={isModalOpen} onClose={closeModal} />
-      <About/>
+      <SignInModal isOpen={isSignInModalOpen} onClose={closeSignInModal} />
+      <About isOpen={isAboutModalOpen} onClose={closeAbout} />  {/* Render the About modal */}
     </nav>
   );
 };
 
-export default Navbar;
+export default Navbar
