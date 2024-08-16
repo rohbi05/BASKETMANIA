@@ -720,10 +720,10 @@ button:hover svg {
   color: #fff;
   border-radius: 10px;
   width: 300px;
-  margin: 20px; /* Adjust margin to control spacing around the container */
-  position: absolute; /* Position it absolutely */
-  left: 0; /* Align it to the left edge */
-  top: 80px; /* Adjust top position if needed */
+  margin: 20px;
+  position: absolute;
+  left: 2;
+  top: 80px;
 }
 
 .fixtures h2 {
@@ -733,12 +733,6 @@ button:hover svg {
   text-align: center;
   margin-bottom: 10px;
   color: #fff;
-}
-
-.fixtures p {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 12px;
 }
 
 .fixtures-list {
@@ -752,4 +746,42 @@ button:hover svg {
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .fixtures {
+    width: 80%;
+    left: 10px;
+    top: 60px;
+    margin: 10px;
+  }
+
+  .fixtures h2 {
+    font-size: 1.5rem;
+  }
+
+  .fixture-item {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fixtures {
+    width: 100%;
+    left: 0;
+    top: 50px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .fixtures h2 {
+    font-size: 1.2rem;
+  }
+
+  .fixture-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+  }
 }
