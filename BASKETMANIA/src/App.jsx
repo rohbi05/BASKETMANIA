@@ -1,9 +1,10 @@
-
-import "./App.css";
+import App1 from './components/App1'
+import TeamLogoSlider from './components/TeamLogoSlider'
 function App() {
   return (
     <>
-    
+    <TeamLogoSlider/>
+    <App1/>
 </>
   );}
 

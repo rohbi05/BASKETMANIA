@@ -1,8 +1,9 @@
 import "./index.css";
-import App1 from "./components/App1.jsx";
+import App from './App'
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App1 />
+    <App/>
   </StrictMode>
 );
