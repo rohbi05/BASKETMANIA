@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+
 const images = [
   "https://img.goodfon.com/original/3840x2400/4/c0/wallpaper-sport-logo-basketball-nba-cleveland-cavaliers-1.jpg",
   "https://img.goodfon.com/original/3840x2400/6/63/wallpaper-sport-logo-basketball-nba-new-orleans-pelicans-1.jpg",
@@ -14,21 +15,42 @@ const images = [
 
 const TeamLogoSlider = () => {
   const [index, setIndex] = useState(0);
-  const delay = 5000;
+  const [isHovered, setIsHovered] = useState(false);
+  const delay = 3000;
 
   useEffect(() => {
+    if (isHovered) return;
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, delay);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [isHovered]);
+
+  const handlePrevClick = () => {
+    setIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
+
+  const handleNextClick = () => {
+    setIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
   return (
-    <div className="slideshow">
+    <div 
+      className="slideshow"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <button 
+        className="arrow left-arrow" 
+        aria-label="Previous slide" 
+        onClick={handlePrevClick}
+      >
+        &#10094;
+      </button>
       <div
         className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
+        style={{ transform: `translateX(${-index * 100}%)` }}
       >
         {images.map((image, i) => (
           <div key={i} className="slide">
@@ -36,12 +58,22 @@ const TeamLogoSlider = () => {
           </div>
         ))}
       </div>
+      <button 
+        className="arrow right-arrow" 
+        aria-label="Next slide" 
+        onClick={handleNextClick}
+      >
+        &#10095;
+      </button>
       <div className="btns">
         {images.map((_, id) => (
           <div
             key={id}
             className={`btn${index === id ? " active" : ""}`}
             onClick={() => setIndex(id)}
+            aria-label={`Slide ${id + 1}`}
+            role="button"
+            tabIndex={0}
           ></div>
         ))}
       </div>
