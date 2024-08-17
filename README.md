@@ -104,3 +104,6 @@ For any inquiries or suggestions, feel free to contact us at
 - melvine.ambwere@student.moringaschool.com
 - elvis.amonde@student.moringaschool.com
 - eugene.mukabi@student.moringaschool.com
+
+ ## deployed link
+ [Link](https://basketmania-j5gi.vercel.app/)
