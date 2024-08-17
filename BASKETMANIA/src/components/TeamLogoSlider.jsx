@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 
 
 const images = [
-  "https://img.goodfon.com/original/3840x2400/4/c0/wallpaper-sport-logo-basketball-nba-cleveland-cavaliers-1.jpg",
+  "https://w0.peakpx.com/wallpaper/446/809/HD-wallpaper-cleveland-cavaliers-nba-logo-black-stone-basketball-eastern-conference-asphalt-texture-usa-creative-cavs-basketball-club-cleveland-cavaliers-logo.jpg",
   "https://img.goodfon.com/original/3840x2400/6/63/wallpaper-sport-logo-basketball-nba-new-orleans-pelicans-1.jpg",
-  "https://wallpapers.com/images/hd/philadelphia-76ers-flag-zu8n2sqbern5peel.jpg",
+  "https://i.pinimg.com/736x/d0/a1/4e/d0a14e39c092abbc0026cb35a2774619.jpg",
   "https://images.alphacoders.com/971/971206.jpg",
   "https://wallpaper.forfun.com/fetch/dd/dde2a5dd12b621f2957c6588010919cd.jpeg",
-  "https://wallpapers.com/images/hd/phoenix-suns-on-metal-screen-mesh-t7deflifg8y3uopp.jpg",
-  "https://images8.alphacoders.com/971/971316.jpg",
-  "https://images.alphacoders.com/971/971220.jpg",
-  "https://wallpapers.com/images/hd/golden-state-warriors-logo-pqz9td3l5vcief7h.jpg",
+  "https://w0.peakpx.com/wallpaper/565/496/HD-wallpaper-phoenix-suns-nba-logo-black-stone-basketball-western-conference-asphalt-texture-usa-creative-basketball-club-phoenix-suns-logo.jpg",
+  "https://w0.peakpx.com/wallpaper/768/989/HD-wallpaper-los-angeles-lakers-american-basketball-team-purple-stone-background-los-angeles-lakers-logo-grunge-art-nba-basketball-usa-los-angeles-lakers-emblem.jpg",
+  "https://i.pinimg.com/736x/24/92/35/2492350409c53ba0208d7a6bdb39857e.jpg",
+  "https://i.pinimg.com/564x/bb/7a/34/bb7a3494e0d190ba57fc4785e3cda1f9.jpg",
 ];
 
 const TeamLogoSlider = () => {
