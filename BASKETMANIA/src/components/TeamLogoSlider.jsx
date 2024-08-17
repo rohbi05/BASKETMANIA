@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 const images = [
   "https://img.goodfon.com/original/3840x2400/4/c0/wallpaper-sport-logo-basketball-nba-cleveland-cavaliers-1.jpg",
   "https://img.goodfon.com/original/3840x2400/6/63/wallpaper-sport-logo-basketball-nba-new-orleans-pelicans-1.jpg",
@@ -10,31 +11,28 @@ const images = [
   "https://images.alphacoders.com/971/971220.jpg",
   "https://wallpapers.com/images/hd/golden-state-warriors-logo-pqz9td3l5vcief7h.jpg",
 ];
+
 const TeamLogoSlider = () => {
   const [index, setIndex] = useState(0);
   const delay = 5000;
 
   useEffect(() => {
-    setTimeout(
-      () =>
-        setIndex((index1) => (index1 === images.length - 1 ? 0 : index1 + 1)),
-      delay
-    );
+    const intervalId = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, delay);
 
-    return () => {};
-  }, [index]);
-
-  console.log(images);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className="slideshow">
       <div
         className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%,0,0)` }}
+        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {images.map((image, index) => (
-          <div key={index} className="slide">
-            <img className="img" src={image} alt="" />
+        {images.map((image, i) => (
+          <div key={i} className="slide">
+            <img className="img" src={image} alt={`Slide ${i}`} />
           </div>
         ))}
       </div>
@@ -42,10 +40,8 @@ const TeamLogoSlider = () => {
         {images.map((_, id) => (
           <div
             key={id}
-            className={`btn${index === id ? "active" : ""}`}
-            onClick={() => {
-              setIndex(id);
-            }}
+            className={`btn${index === id ? " active" : ""}`}
+            onClick={() => setIndex(id)}
           ></div>
         ))}
       </div>
