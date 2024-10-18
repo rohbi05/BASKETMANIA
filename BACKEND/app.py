@@ -16,7 +16,12 @@ db_config = {
 # Secret key for JWT (replace with a secure value)
 secret_key = "your_secret_key"
 
-
+# User model
+class User:
+    def __init__(self, username, email, password):
+        self.username = username
+        self.email = email
+        self.password = password
 
 
 
