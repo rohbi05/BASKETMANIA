@@ -52,3 +52,19 @@ def to_dict(self):
             'weight': self.weight,   # Include weight in to_dict
             'teams': [team_player.to_dict() for team_player in self.teams]
         }
+
+# Association table for Many-to-Many between Team and Player
+class TeamPlayer(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    team_id = db.Column(db.Integer, db.ForeignKey('team.id'), nullable=False)
+    player_id = db.Column(db.Integer, db.ForeignKey('player.id'), nullable=False)
+    role = db.Column(db.String(80), nullable=False)  # User-submittable attribute
+
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'team_id': self.team_id,
+            'player_id': self.player_id,
+            'role': self.role
+        }
+    
