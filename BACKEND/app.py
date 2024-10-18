@@ -19,6 +19,20 @@ def verify_password(password, password_hash):
     return check_password_hash(password_hash, password)
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        user = users.get(username)  
+        if user and verify_password(password, user.password_hash):
+            login_user(user)
+            flash('Login successful!', 'success')
+            return redirect(url_for('home'))  
+        else:
+            flash('Invalid username or password', 'error')
+    return render_template('login.html')
+
 
 
 
