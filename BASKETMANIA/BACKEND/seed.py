@@ -129,3 +129,14 @@ def seed_data():
     # Commit the users and teams first to ensure foreign key references are valid
     db.session.commit()
 
+    for player in player_data:
+        new_player = Player(
+            name=player["name"],
+            age=2024 - int(player["birthdate"].split('-')[0]),  # Calculate age
+            position=player["position"],
+            height=float(player["height"].split("'")[0]) * 12 + float(player["height"].split("'")[1][:-1]),  # Convert height to inches
+            weight=float(player["weight"].split()[0]),  # Assuming the weight is in lbs
+            birthdate=datetime.strptime(player["birthdate"], "%Y-%m-%d").date(),  # Convert to date object
+            image_url=player["image_url"]
+        )
+        db.session.add(new_player)
