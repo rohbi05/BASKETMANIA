@@ -102,5 +102,10 @@ player_data = [
         "birthdate": "2000-01-26",
         "image_url": "https://i.pinimg.com/236x/5b/b7/41/5bb7418244b5323c350dc12768e0bb66.jpg"
     }
-    
 ]
+def clear_data():
+    db.session.query(TeamPlayer).delete()
+    db.session.query(Player).delete()
+    db.session.query(Team).delete()
+    db.session.query(User).delete()
+    db.session.commit()
