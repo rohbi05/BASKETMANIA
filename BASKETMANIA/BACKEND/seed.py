@@ -150,3 +150,12 @@ def seed_data():
         elif new_player.name == "Stephen Curry":
             team_player = TeamPlayer(team=team2, player=new_player, role='Star Player')
             db.session.add(team_player)
+
+    db.session.commit()
+
+if __name__ == '__main__':
+    with app.app_context():
+        clear_data() 
+        seed_data()   
+        print("Database seeded successfully!")
+
