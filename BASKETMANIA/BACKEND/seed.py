@@ -140,3 +140,13 @@ def seed_data():
             image_url=player["image_url"]
         )
         db.session.add(new_player)
+
+        if new_player.name == "LeBron James":
+            team_player = TeamPlayer(team=team1, player=new_player, role='Star Player')
+            db.session.add(team_player)
+        elif new_player.name == "Kevin Durant":
+            team_player = TeamPlayer(team=team2, player=new_player, role='Star Player')
+            db.session.add(team_player)
+        elif new_player.name == "Stephen Curry":
+            team_player = TeamPlayer(team=team2, player=new_player, role='Star Player')
+            db.session.add(team_player)
