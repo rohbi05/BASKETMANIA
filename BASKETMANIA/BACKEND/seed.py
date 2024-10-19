@@ -109,3 +109,23 @@ def clear_data():
     db.session.query(Team).delete()
     db.session.query(User).delete()
     db.session.commit()
+
+
+def seed_data():
+    # Sample Users
+    user1 = User(username='john_doe', email='john@example.com')
+    user2 = User(username='jane_smith', email='jane@example.com')
+
+    db.session.add(user1)
+    db.session.add(user2)
+
+    # Sample Teams
+    team1 = Team(name='Cleveland Cavaliers', user=user1)
+    team2 = Team(name='Los Angeles Lakers', user=user2)
+
+    db.session.add(team1)
+    db.session.add(team2)
+
+    # Commit the users and teams first to ensure foreign key references are valid
+    db.session.commit()
+
