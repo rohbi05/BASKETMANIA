@@ -1,10 +1,11 @@
+from database import db  
 
 # User model (One-to-Many with Team)
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-
+    password = db.Column(db.String(255), nullable=False)  # Add password field
+    username = db.Column(db.String(80), unique=True, nullable=False)
     teams = db.relationship('Team', backref='user', lazy=True)
 
     def to_dict(self):
@@ -14,7 +15,11 @@ class User(db.Model):
             'email': self.email,
             'teams': [team.to_dict() for team in self.teams]
         }
-    # Team model (One-to-Many with Player, Many-to-One with User)
+
+    def __repr__(self):
+        return f'<User {self.email}>'
+
+# Team model (One-to-Many with Player, Many-to-One with User)
 class Team(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
@@ -29,7 +34,8 @@ class Team(db.Model):
             'user_id': self.user_id,
             'players': [team_player.to_dict() for team_player in self.players]
         }
-    # Player model (Many-to-Many with Team through TeamPlayer)
+
+# Player model (Many-to-Many with Team through TeamPlayer)
 class Player(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
@@ -42,7 +48,7 @@ class Player(db.Model):
 
     teams = db.relationship('TeamPlayer', backref='player', lazy=True)
 
-def to_dict(self):
+    def to_dict(self):
         return {
             'id': self.id,
             'name': self.name,
@@ -50,6 +56,8 @@ def to_dict(self):
             'position': self.position,
             'height': self.height,  # Include height in to_dict
             'weight': self.weight,   # Include weight in to_dict
+            'birthdate': str(self.birthdate) if self.birthdate else None,  # Format birthdate to string
+            'image_url': self.image_url,
             'teams': [team_player.to_dict() for team_player in self.teams]
         }
 
@@ -67,4 +75,3 @@ class TeamPlayer(db.Model):
             'player_id': self.player_id,
             'role': self.role
         }
-    
