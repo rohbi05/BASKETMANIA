@@ -117,3 +117,13 @@ def seed_db():
     with app.app_context():
         db.drop_all()  # Clear existing data
         db.create_all()
+
+            # Create users
+        for user_data in users_data:
+            new_user = User(
+                username=user_data['username'],
+                email=user_data['email'],
+                password=user_data['password']  # Stores the password for seeding; ideally, hash in production
+            )
+            db.session.add(new_user)
+
