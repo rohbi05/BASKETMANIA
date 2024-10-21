@@ -106,3 +106,9 @@ players_data = [
         'image_url': 'https://i.pinimg.com/236x/5b/b7/41/5bb7418244b5323c350dc12768e0bb66.jpg'
     },
 ]
+
+team_players_data = [
+    {'team_id': 1, 'player_id': 1, 'role': 'Captain'},
+    {'team_id': 1, 'player_id': 2, 'role': 'Member'},
+    {'team_id': 2, 'player_id': 1, 'role': 'Member'},
+]
