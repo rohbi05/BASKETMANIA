@@ -114,3 +114,4 @@ team_players_data = [
 ]
 # Function to seed the database
 def seed_db():
+    with app.app_context():
