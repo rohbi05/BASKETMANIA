@@ -129,3 +129,14 @@ def seed_db():
 
         db.session.commit() 
 
+                # Create teams
+        for team_data in teams_data:
+            new_team = Team(
+                name=team_data['name'],
+                user_id=team_data['user_id']
+            )
+            db.session.add(new_team)
+
+        db.session.commit()  # Commit after adding teams
+
+
