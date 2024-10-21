@@ -8,3 +8,6 @@ CORS(app)
 # Database configuration
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///basketmania.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize SQLAlchemy with the Flask app
+db = SQLAlchemy(app) 
