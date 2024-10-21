@@ -13,7 +13,18 @@ const SignInModal = ({ isOpen, onClose }) => {
       password: '',
       confirmPassword: '',
     },
-
+    validationSchema: Yup.object({
+      username: Yup.string().required('Required'),
+      email: Yup.string()
+        .email('Invalid email format')
+        .required('Required'),
+      password: Yup.string()
+        .min(6, 'Password must be at least 6 characters')
+        .required('Required'),
+      confirmPassword: Yup.string()
+        .oneOf([Yup.ref('password'), null], 'Passwords must match')
+        .required('Required'),
+    }),
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
