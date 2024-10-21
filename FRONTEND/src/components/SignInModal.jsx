@@ -6,6 +6,14 @@ import * as Yup from 'yup';
 const SignInModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  const formik = useFormik({
+    initialValues: {
+      username: '', // Add username field
+      email: '',
+      password: '',
+      confirmPassword: '',
+    },
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
