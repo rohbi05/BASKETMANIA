@@ -112,13 +112,15 @@ team_players_data = [
     {'team_id': 1, 'player_id': 2, 'role': 'Member'},
     {'team_id': 2, 'player_id': 1, 'role': 'Member'},
 ]
+
 # Function to seed the database
 def seed_db():
     with app.app_context():
-        db.drop_all()  # Clear existing data
+        # Clear existing data
+        db.drop_all()
         db.create_all()
 
-            # Create users
+        # Create users
         for user_data in users_data:
             new_user = User(
                 username=user_data['username'],
@@ -127,9 +129,9 @@ def seed_db():
             )
             db.session.add(new_user)
 
-        db.session.commit() 
+        db.session.commit()  
 
-                # Create teams
+        # Create teams
         for team_data in teams_data:
             new_team = Team(
                 name=team_data['name'],
@@ -138,8 +140,8 @@ def seed_db():
             db.session.add(new_team)
 
         db.session.commit()  # Commit after adding teams
-       
-       # Create players
+
+        # Create players
         for player_data in players_data:
             # Convert birthdate string to a date object
             birthdate = datetime.strptime(player_data['birthdate'], '%Y-%m-%d').date()
@@ -166,5 +168,10 @@ def seed_db():
             )
             db.session.add(new_team_player)
 
-        db.session.commit() 
+        db.session.commit()  
 
+        print("Database seeded successfully.")
+
+# Run the seed function
+if __name__ == '__main__':
+    seed_db()
