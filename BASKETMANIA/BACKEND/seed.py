@@ -138,5 +138,22 @@ def seed_db():
             db.session.add(new_team)
 
         db.session.commit()  # Commit after adding teams
+       
+       # Create players
+        for player_data in players_data:
+            # Convert birthdate string to a date object
+            birthdate = datetime.strptime(player_data['birthdate'], '%Y-%m-%d').date()
+            
+            new_player = Player(
+                name=player_data['name'],
+                age=player_data['age'],
+                position=player_data['position'],
+                height=player_data['height'],
+                weight=player_data['weight'],
+                birthdate=birthdate,  
+                image_url=player_data['image_url']
+            )
+            db.session.add(new_player)
 
+        db.session.commit()  
 
