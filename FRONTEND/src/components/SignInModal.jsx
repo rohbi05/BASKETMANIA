@@ -25,6 +25,33 @@ const SignInModal = ({ isOpen, onClose }) => {
         .oneOf([Yup.ref('password'), null], 'Passwords must match')
         .required('Required'),
     }),
+
+    onSubmit: async (values) => {
+      try {
+        const response = await fetch('http://localhost:5000/signup', { // Adjust URL based on your backend server
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: values.username, // Include username in the request
+            email: values.email,
+            password: values.password,
+          }),
+        });
+
+        const data = await response.json();
+        
+        if (response.ok) {
+          console.log('User created successfully:', data);
+          onClose(); // Close the modal after successful sign-up
+        } else {
+          console.error('Error signing up:', data.error);
+        }
+      } catch (error) {
+        console.error('Network error:', error);
+      }
+    },
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
