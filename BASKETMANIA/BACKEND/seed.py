@@ -157,3 +157,14 @@ def seed_db():
 
         db.session.commit()  
 
+        # Create team-players relationships
+        for team_player_data in team_players_data:
+            new_team_player = TeamPlayer(
+                team_id=team_player_data['team_id'],
+                player_id=team_player_data['player_id'],
+                role=team_player_data['role']
+            )
+            db.session.add(new_team_player)
+
+        db.session.commit() 
+
