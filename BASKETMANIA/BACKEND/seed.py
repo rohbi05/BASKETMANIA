@@ -127,3 +127,5 @@ def seed_db():
             )
             db.session.add(new_user)
 
+        db.session.commit() 
+
