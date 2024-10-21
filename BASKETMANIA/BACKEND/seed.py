@@ -112,3 +112,5 @@ team_players_data = [
     {'team_id': 1, 'player_id': 2, 'role': 'Member'},
     {'team_id': 2, 'player_id': 1, 'role': 'Member'},
 ]
+# Function to seed the database
+def seed_db():
