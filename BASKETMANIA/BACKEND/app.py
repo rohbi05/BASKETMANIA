@@ -175,7 +175,15 @@ def sign_up():
         email = data.get('email')
         password = data.get('password')
 
+        # Validate user credentials
+        if not username or not email or not password:
+            return error_response("Username, email, and password are required.", 400)
 
+
+ 
+
+   
+       
 
 if __name__ == '__main__':
     app.run(debug=True)
