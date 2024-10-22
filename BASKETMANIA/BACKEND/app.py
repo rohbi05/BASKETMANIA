@@ -167,5 +167,15 @@ def handle_team(id):
         db.session.commit()
         return jsonify({'message': 'Team deleted successfully'}), 204
 
+@app.route('/signup', methods=['GET', 'POST'])
+def sign_up():
+    if request.method == 'POST':
+        data = request.get_json() # Get the JSON data sent from the frontend
+        username = data.get('username')
+        email = data.get('email')
+        password = data.get('password')
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
