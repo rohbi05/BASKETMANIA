@@ -179,6 +179,10 @@ def sign_up():
         if not username or not email or not password:
             return error_response("Username, email, and password are required.", 400)
 
+        # Check if user already exists
+        existing_user = User.query.filter_by(email=email).first()
+        if existing_user:
+            return error_response("User already exists.", 400)
 
  
 
