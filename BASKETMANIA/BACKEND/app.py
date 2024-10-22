@@ -184,7 +184,12 @@ def sign_up():
         if existing_user:
             return error_response("User already exists.", 400)
 
- 
+        # Create new user with raw password (not recommended)
+        new_user = User(username=username, email=email, password=password) # Store raw password
+        db.session.add(new_user)
+        db.session.commit()
+
+        return jsonify(new_user.to_dict()), 201
 
    
        
