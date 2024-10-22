@@ -35,7 +35,7 @@ const Navbar = () => {
         <ul className="navbar-links">
           <li><Link to="/home" onClick={handleHomeClick}>Home</Link></li>
           <li><span onClick={openAbout} style={{ cursor: 'pointer' }}>About</span></li>  {/* Use button to trigger About modal */}
-          <li><button onClick={openSignInModal} style={{ cursor: 'pointer' }}>Sign In</button></li>
+          <li><button onClick={openSignInModal} style={{ cursor: 'pointer' }}>Sign Up</button></li>
         </ul>
       </div>
       <SignInModal isOpen={isSignInModalOpen} onClose={closeSignInModal} />
