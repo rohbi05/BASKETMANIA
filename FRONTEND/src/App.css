@@ -123,8 +123,11 @@
   gap: 0.5rem;
 }
 
+.form input[type="username"],
 .form input[type="email"],
-.form input[type="password"] {
+.form input[type="password"],
+.form input[type="text"], /* Include this for consistency */
+.form input[type="confirmPassword"] { /* Specify this for confirmPassword as well */
   border-radius: 0.5rem;
   padding: 1rem 0.75rem;
   width: 100%;
@@ -134,10 +137,13 @@
   gap: 0.5rem;
   background-color: var(--clr-alpha);
   outline: 2px solid var(--bg-dark);
+  height: 0.5rem; /* Set a fixed height for all input fields */
 }
 
 .form input[type="email"]:focus,
-.form input[type="password"]:focus {
+.form input[type="password"]:focus,
+.form input[type="username"]:focus, /* Include this to match styles */
+.form input[type="confirmPassword"]:focus { /* Include this for confirmPassword as well */
   outline: 2px solid var(--clr);
 }
 
