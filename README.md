@@ -1,6 +1,6 @@
 # BasketMania
 ## Overview
-BasketMania is a dynamic basketball management web application designed to bring the world of basketball closer to you. Whether you're an avid fan looking to stay updated with the latest basketball news or a manager aiming to create the best team, BasketMania has something for everyone. The application offers a platform to view and manage players, create and organize teams, and analyze player statistics in a user-friendly interface
+BasketMania is a dynamic basketball management web application designed to bring the world of basketball closer to you. Whether you're an avid fan looking to stay updated with the latest basketball news or a manager aiming to create the best team, BasketMania has something for everyone. The application offers a platform to view and manage players, create and organize teams, and analyze player statistics in a user-friendly interface.
 
 ## Features
 - **Team Logo Slider:** A sleek carousel displaying the logos of various NBA teams.
