@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
-import Navbar from './compoents/Navbar.jsx';
-import Home from './compoents/Home.jsx';
-import About from './compoents/About.jsx';
-import SignUpModal from './compoents/SignupModal.jsx';
-import TeamLogoSlider from './compoents/TeamLogoSlider.jsx';
-import Fixtures from './compoents/Fixtures.jsx';
-import Footer from './compoents/Footer.jsx';
-import App1 from './compoents/App1.jsx';
-import ProtectedRoute from './compoents/ProctedRoute.jsx';
+import Navbar from './components/Navbar.jsx';
+import Home from './components/Home.jsx';
+import About from './components/About.jsx';
+import SignUpModal from './components/SignupModal.jsx';
+import TeamLogoSlider from './components/TeamLogoSlider.jsx';
+import Fixtures from './components/Fixtures.jsx';
+import Footer from './components/Footer.jsx';
+import App1 from './components/App1.jsx';
+import ProtectedRoute from './components/ProctedRoute.jsx';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isSignUpOpen, setIsSignUpOpen] = useState(true); 
