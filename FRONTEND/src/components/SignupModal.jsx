@@ -3,7 +3,7 @@ import '../App.css';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-const SignInModal = ({ isOpen, onClose }) => {
+const SignUpModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const formik = useFormik({
@@ -122,4 +122,4 @@ const SignInModal = ({ isOpen, onClose }) => {
     </div>
   );
 };
-export default SignInModal;
+export default SignUpModal;
