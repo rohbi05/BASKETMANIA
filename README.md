@@ -11,7 +11,7 @@ BasketMania is a dynamic basketball management web application designed to bring
 - **Fixtures Section:** A list of popular NBA teams.
 
 ## Technologies Used
-- **React:** Frontend JavaScript library for building user interfaces.
+- **React:** Frontend JavaScript library for building user interfaces
 - **CSS:** Styling for responsive layouts and modals.
 - **JavaScript:** Handles user interactions and state management.
 - **HTML:** The structure of the web pages.
