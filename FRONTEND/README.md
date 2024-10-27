@@ -71,13 +71,59 @@ You can access the API at `http://localhost:5000`. Use tools like Postman or cur
      - **Request Body:**
      ```json
         {
-          "username": "your_username",
-          "email": "your_email@example.com",
-          "password": "your_password"
+          "username": "basketmania",
+          "email": "basketmania@gmail.com",
+          "password": "basketmania123"
        }
      ```
      - **Response:** User details of the created user.
+       
+**Team Endpoints**
+ - **Get All Teams:**
+     - **Endpoint:** `GET /teams`
+     - **Response:** List of all teams.
+ - **Create New Team:**
+     - **Endpoint:** POST /teams
+     - **Request Body:**
+     ```json
+        {
+          "name": "Team Alpha",
+          "user_id": 1
+        }
+     ```
+     - **Response:** Details of the created team.
 
+**Player Endpoints**
+ - **Get All Players:**
+     - **Endpoint:** `GET /players`
+     - **Response:** List of all players.
+- **Create New Player:**
+    - **Endpoint:** POST /players
+    - **Request Body:**
+    ```json
+       {
+         "name": "Player Name",
+         "age": 25,
+         "position": "Guard",
+         "height": 6.3,
+         "weight": 190,
+         "birthdate": "1998-01-01",
+         "image_url": "http://example.com/player_image.jpg"
+     }
+    ```
+    - **Response:** Details of the created player.
+
+**Team-Player Endpoints**
+- **Assign Player to Team:**
+    - **Endpoint:** `POST /team-players`
+    - **Request Body:**
+    ```json
+       {
+         "team_id": 1,
+         "player_id": 2,
+       }
+    ```
+   - **Response:** Details of the team-player association.
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
