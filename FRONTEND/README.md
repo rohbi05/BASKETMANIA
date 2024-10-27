@@ -1,59 +1,63 @@
-# BasketMania
+# BasketMania: Basketball Management System
 
-Welcome to **BasketMania**, a basketball team and player management system built with Flask, SQLAlchemy, and SQLite. This application allows users to manage basketball teams, players, and their associations effectively. 
+BasketMania is a basketball management system built with Flask and SQLAlchemy. This application allows users to manage teams, players, and user accounts, facilitating a comprehensive overview of basketball activities.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+  - [User Endpoints](#user-endpoints)
+  - [Team Endpoints](#team-endpoints)
+  - [Player Endpoints](#player-endpoints)
+  - [Team-Player Endpoints](#team-player-endpoints)
+- [License](#license)
 
 ## Features
 
-- **User Management**: Create, read, update, and delete users.
-- **Team Management**: Manage teams associated with users.
-- **Player Management**: Add and retrieve player details.
-- **Team-Player Associations**: Assign players to teams with specific roles.
-- **Database Migrations**: Use Flask-Migrate for handling database migrations.
-- **RESTful API**: Expose a RESTful API for all functionalities.
+- **User Management**: Sign up, log in, and manage user profiles.
+- **Team Management**: Create and manage basketball teams.
+- **Player Management**: Add and manage players, including their stats and details.
+- **Team-Player Association**: Assign players to teams with specific roles.
 
-## Tech Stack
+## Technologies
 
 - **Backend**: Flask
-- **Database**: SQLite with SQLAlchemy
-- **Authentication**: Password hashing with `werkzeug.security`
-- **API Documentation**: Built-in JSON responses
+- **Database**: SQLite
+- **ORM**: SQLAlchemy
+- **Migrations**: Flask-Migrate
+- **API Development**: Flask-RESTful
+- **Cross-Origin Resource Sharing**: Flask-CORS
 
-## Getting Started
+## Installation
 
-### Prerequisites
+To get started with the project, follow these steps:
 
-- Python 3.x
-- pip (Python package manager)
-
-### Installation
-
-1. **Clone the repository**:
+1. **Clone the Repository**:
 ```bash
 git clone git@github.com:rohbi05/BASKETMANIA.git
-```
-2 Navigate to the project directory:
-```bash
 cd BASKETMANIA
 ```
-3 Install dependencies:
+2. **Set Up a Virtual Environment:**
 ```bash
-npm install
+python3 -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ```
-4 Start the JSON Server:
+3. **Install Dependencies:**
+```bash
+pip install -r requirements.txt
+```
+4. **Run Migrations:**
+```bash
+flask db upgrade
+```
+5. **Run the Application:**
+```bash
+flask run
+```
 
-To run the JSON server for players data:
-
-```bash
-json-server --watch db.json --port 3000
-```
-To run the JSON server for the user's team:
-```bash
-json-server --watch team.json --port 3001
-```
-5 Start the server:
-```bash
-npm run dev
-```
 
 oo2 The server will run on **http://localhost:3000** for players and **http://localhost:3001** for the user's team.
 
