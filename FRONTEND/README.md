@@ -58,8 +58,26 @@ flask db upgrade
 flask run
 ```
 
+## Usage
+You can access the API at `http://localhost:5000`. Use tools like Postman or curl to interact with the endpoints.
 
-oo2 The server will run on **http://localhost:3000** for players and **http://localhost:3001** for the user's team.
+## API Documentation
+**User Endpoints**
+ - **Get All Users:**
+     - **Endpoint:** `GET /users`
+     - **Response:** List of all users.
+- **Create New User:**
+     - **Endpoint:** `POST /users`
+     - **Request Body:**
+     ```json
+        {
+          "username": "your_username",
+          "email": "your_email@example.com",
+          "password": "your_password"
+       }
+     ```
+     - **Response:** User details of the created user.
+
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
